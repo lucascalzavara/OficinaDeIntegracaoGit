@@ -1,4 +1,4 @@
-package com.example.lucascalzavara.controle;
+package com.example.helder.serial;
 
 import org.junit.Test;
 

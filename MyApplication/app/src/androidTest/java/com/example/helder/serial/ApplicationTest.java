@@ -1,4 +1,4 @@
-package com.example.lucascalzavara.controle;
+package com.example.helder.serial;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

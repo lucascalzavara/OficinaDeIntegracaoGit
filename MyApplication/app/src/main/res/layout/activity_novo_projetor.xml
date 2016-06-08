@@ -7,7 +7,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.lucascalzavara.controle.NovoProjetorActivity">
+    tools:context="com.example.helder.serial.NovoProjetor"
+    android:onClick="capturaLiga">
 
 
     <Button
@@ -16,7 +17,9 @@
         android:text="SOURCE SEARCH"
         android:id="@+id/button"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:onClick="capturaSs" />
 
     <Button
         android:layout_width="wrap_content"
@@ -25,7 +28,8 @@
         android:id="@+id/button2"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:background="#ff0000" />
+        android:background="#ff0000"
+        android:layout_alignParentRight="true" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -34,7 +38,9 @@
         android:id="@+id/button3"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
-        android:text="7" />
+        android:text="7"
+        android:layout_alignParentLeft="true"
+        android:onClick="captura7" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -43,7 +49,9 @@
         android:text="4"
         android:id="@+id/button4"
         android:layout_above="@+id/button3"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:onClick="captura4" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -52,7 +60,9 @@
         android:text="1"
         android:id="@+id/button5"
         android:layout_above="@+id/button4"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:onClick="captura1" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -61,7 +71,9 @@
         android:text="8"
         android:id="@+id/button6"
         android:layout_alignParentBottom="true"
-        android:layout_toEndOf="@+id/button3" />
+        android:layout_toEndOf="@+id/button3"
+        android:layout_toRightOf="@+id/button3"
+        android:onClick="captura8" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -70,7 +82,9 @@
         android:text="5"
         android:id="@+id/button7"
         android:layout_above="@+id/button6"
-        android:layout_toEndOf="@+id/button3" />
+        android:layout_toEndOf="@+id/button3"
+        android:layout_toRightOf="@+id/button3"
+        android:onClick="captura5" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -79,7 +93,9 @@
         android:text="2"
         android:id="@+id/button8"
         android:layout_above="@+id/button7"
-        android:layout_toEndOf="@+id/button4" />
+        android:layout_toEndOf="@+id/button4"
+        android:layout_toRightOf="@+id/button4"
+        android:onClick="captura2" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -88,7 +104,9 @@
         android:text="9"
         android:id="@+id/button9"
         android:layout_alignParentBottom="true"
-        android:layout_toEndOf="@+id/button6" />
+        android:layout_toEndOf="@+id/button6"
+        android:layout_toRightOf="@+id/button6"
+        android:onClick="captura9" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -97,7 +115,9 @@
         android:text="6"
         android:id="@+id/button10"
         android:layout_above="@+id/button9"
-        android:layout_alignStart="@+id/button9" />
+        android:layout_alignStart="@+id/button9"
+        android:layout_alignLeft="@+id/button9"
+        android:onClick="captura6" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -106,7 +126,9 @@
         android:text="3"
         android:id="@+id/button11"
         android:layout_above="@+id/button10"
-        android:layout_alignStart="@+id/button10" />
+        android:layout_alignStart="@+id/button10"
+        android:layout_alignLeft="@+id/button10"
+        android:onClick="captura3" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -115,7 +137,9 @@
         android:text="0"
         android:id="@+id/button12"
         android:layout_alignParentBottom="true"
-        android:layout_toEndOf="@+id/button9" />
+        android:layout_toEndOf="@+id/button9"
+        android:layout_toRightOf="@+id/button9"
+        android:onClick="captura0" />
 
     <Button
         android:layout_width="wrap_content"
@@ -123,7 +147,9 @@
         android:text="COMP"
         android:id="@+id/button13"
         android:layout_below="@+id/button"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:onClick="capturaComp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -131,7 +157,9 @@
         android:text="VIDEO"
         android:id="@+id/button14"
         android:layout_alignTop="@+id/button13"
-        android:layout_toEndOf="@+id/button13" />
+        android:layout_toEndOf="@+id/button13"
+        android:layout_toRightOf="@+id/button13"
+        android:onClick="capturaVideo" />
 
     <Button
         android:layout_width="wrap_content"
@@ -139,7 +167,9 @@
         android:text="USB"
         android:id="@+id/button15"
         android:layout_alignTop="@+id/button14"
-        android:layout_toEndOf="@+id/button14" />
+        android:layout_toEndOf="@+id/button14"
+        android:layout_toRightOf="@+id/button14"
+        android:onClick="capturaUsb" />
 
     <Button
         android:layout_width="wrap_content"
@@ -147,7 +177,10 @@
         android:text="LAN"
         android:id="@+id/button16"
         android:layout_below="@+id/button2"
-        android:layout_toEndOf="@+id/button15" />
+        android:layout_toEndOf="@+id/button15"
+        android:layout_toRightOf="@+id/button15"
+        android:nestedScrollingEnabled="false"
+        android:onClick="capturaLan" />
 
     <Button
         android:layout_width="wrap_content"
@@ -156,7 +189,8 @@
         android:id="@+id/button17"
         android:layout_below="@+id/button14"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="33dp" />
+        android:layout_marginTop="33dp"
+        android:onClick="capturaCima" />
 
     <Button
         android:layout_width="wrap_content"
@@ -164,7 +198,8 @@
         android:text="OK"
         android:id="@+id/button18"
         android:layout_below="@+id/button17"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="capturaOk" />
 
     <Button
         android:layout_width="wrap_content"
@@ -172,7 +207,8 @@
         android:text="BAIXO"
         android:id="@+id/button19"
         android:layout_below="@+id/button18"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:onClick="capturaBaixo" />
 
     <Button
         android:layout_width="wrap_content"
@@ -180,7 +216,9 @@
         android:text="ESQ"
         android:id="@+id/button20"
         android:layout_below="@+id/button17"
-        android:layout_toStartOf="@+id/button18" />
+        android:layout_toStartOf="@+id/button18"
+        android:layout_toLeftOf="@+id/button18"
+        android:onClick="capturaEsq" />
 
     <Button
         android:layout_width="wrap_content"
@@ -188,7 +226,9 @@
         android:text="DIR"
         android:id="@+id/button21"
         android:layout_below="@+id/button17"
-        android:layout_toEndOf="@+id/button18" />
+        android:layout_toEndOf="@+id/button18"
+        android:layout_toRightOf="@+id/button18"
+        android:onClick="capturaDir" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -197,7 +237,8 @@
         android:text="VOL"
         android:id="@+id/textView2"
         android:layout_below="@+id/button22"
-        android:layout_alignStart="@+id/button23" />
+        android:layout_alignStart="@+id/button23"
+        android:layout_alignLeft="@+id/button23" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -207,7 +248,9 @@
         android:id="@+id/button22"
         android:background="#51d8c8"
         android:layout_below="@+id/button19"
-        android:layout_alignStart="@+id/button26" />
+        android:layout_alignStart="@+id/button26"
+        android:layout_alignLeft="@+id/button26"
+        android:onClick="capturaVolMais" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -218,7 +261,10 @@
         android:background="#51d8c8"
         android:layout_below="@+id/textView2"
         android:layout_alignStart="@+id/button22"
-        android:layout_alignEnd="@+id/button22" />
+        android:layout_alignEnd="@+id/button22"
+        android:layout_alignLeft="@+id/button22"
+        android:layout_alignRight="@+id/button22"
+        android:onClick="capturaVolMenos" />
 
     <Button
         android:layout_width="wrap_content"
@@ -226,7 +272,9 @@
         android:text="MENU"
         android:id="@+id/button24"
         android:layout_below="@+id/button13"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:onClick="capturaMenu" />
 
     <Button
         android:layout_width="wrap_content"
@@ -234,7 +282,9 @@
         android:text="ESC"
         android:id="@+id/button25"
         android:layout_below="@+id/button15"
-        android:layout_alignEnd="@+id/button16" />
+        android:layout_alignEnd="@+id/button16"
+        android:layout_alignRight="@+id/button16"
+        android:onClick="capturaEsc" />
 
     <Button
         android:layout_width="wrap_content"
@@ -243,6 +293,8 @@
         android:id="@+id/button26"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:background="#00ff1e" />
+        android:background="#00ff1e"
+        android:layout_alignParentRight="true"
+        android:onClick="confirmar" />
 
 </RelativeLayout>

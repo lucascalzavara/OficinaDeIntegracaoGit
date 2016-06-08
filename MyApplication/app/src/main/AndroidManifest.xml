@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.lucascalzavara.controle">
+    package="com.example.helder.serial">
 
     <uses-permission android:name="android.permission.BLUETOOTH" />
     <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
@@ -18,17 +18,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ProjetorActivity" />
-        <activity android:name=".TVActivity" />
-        <activity android:name=".NovoActivity" />
-        <activity android:name=".NovoProjetorActivity" />
-        <activity android:name=".NovoTVActivity" />
-        <activity
-            android:name=".PairedDevices"
-            android:label="Paired Devices"
-            android:parentActivityName=".MainActivity" >
-        </activity>
-
+        <activity android:name=".Main2Activity" />
+        <activity android:name=".NovoControle" />
+        <activity android:name=".NovoProjetor" />
+        <activity android:name=".NovoTV"></activity>
     </application>
 
 </manifest>
