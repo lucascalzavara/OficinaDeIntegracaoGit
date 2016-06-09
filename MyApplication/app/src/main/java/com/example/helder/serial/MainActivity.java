@@ -1,11 +1,13 @@
 package com.example.helder.serial;
 
+import android.app.Service;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Handler;
 import android.os.Message;
+import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -84,12 +86,21 @@ public class MainActivity extends AppCompatActivity {
     private View.OnClickListener clickBtCon = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
+
             if(conectado){
                 connect.cancel();
             }else {
                 int pos = dispositivos.getSelectedItemPosition();
                 List<BluetoothDevice> lista = new ArrayList<>(pairedDevices);
                 BluetoothDevice device = lista.get(pos);
+                String address = device.getAddress();
+
+                Intent intent = new Intent(MainActivity.this, Servico.class);
+                intent.putExtra("address", address);
+                startService(intent);
+
+
+
                 connect = new Conexao(device.getAddress());
                 connect.start();
             }
@@ -130,7 +141,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-                /*Botao b = lista_cotroles.get(position);
+                /*
                 connect.write(b.getCodigo().getBytes());*/
             }
         }

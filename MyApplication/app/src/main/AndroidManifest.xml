@@ -24,6 +24,9 @@
         <activity android:name=".NovoTV" />
         <activity android:name=".ProjetorActivity" />
         <activity android:name=".TVActivity"></activity>
+
+        <service android:name=".Servico"></service>
+
     </application>
 
 </manifest>
