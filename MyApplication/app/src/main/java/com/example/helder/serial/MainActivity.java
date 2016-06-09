@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private static Button btCon,btNew;
     private ListView botoes;
     private Spinner dispositivos;
-    private List<Botao> lista_botoes;
+    private List<Controle> lista_cotroles;
     private List<String> lista_dev;
     private ArrayAdapter arrayAdapter;
     private ArrayAdapter arrayAdapterSpinner;
@@ -41,8 +41,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         context = getApplicationContext();
-        lista_botoes = new ArrayList<>();
-        arrayAdapter = new ArrayAdapter<Botao>(this, android.R.layout.simple_list_item_1,lista_botoes);
+
+        BD db = new BD(this);
+        lista_cotroles = db.buscarTodos();
+        arrayAdapter = new ArrayAdapter<Controle>(this, android.R.layout.simple_list_item_1,lista_cotroles);
+
         btCon = (Button)findViewById(R.id.btcon);
         btCon.setOnClickListener(clickBtCon);
         btNew = (Button)findViewById(R.id.btNew);
@@ -108,8 +111,27 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
             if(conectado) {
-                Botao b = lista_botoes.get(position);
-                connect.write(b.getCodigo().getBytes());
+                int idControle = lista_cotroles.get(position).getId();
+                String tipo = lista_cotroles.get(position).getTipo();
+                switch (tipo){
+                    case "Projetor":
+                        Intent startProjetor = new Intent(MainActivity.this, ProjetorActivity.class);
+                        startProjetor.putExtra("conexao", connect);
+                        startProjetor.putExtra("id", idControle);
+                        startActivity(startProjetor);
+                        break;
+                    case "TV":
+                        Intent startTV = new Intent(MainActivity.this, TVActivity.class);
+                        startTV.putExtra("conexao", connect);
+                        startTV.putExtra("id", idControle);
+                        startActivity(startTV);
+                        break;
+                }
+
+
+
+                /*Botao b = lista_cotroles.get(position);
+                connect.write(b.getCodigo().getBytes());*/
             }
         }
     };
@@ -123,14 +145,6 @@ public class MainActivity extends AppCompatActivity {
                 ListaDevices();
             }
         }
-        else
-            if(resultCode == RESULT_OK) {
-                if (requestCode == Novo_botao) {
-                    Botao novo = (Botao) data.getSerializableExtra("Novo");
-                    lista_botoes.add(novo);
-                    arrayAdapter.notifyDataSetChanged();
-                }
-            }
     }
     public static Handler handler = new Handler() {
         public void handleMessage(Message msg) {

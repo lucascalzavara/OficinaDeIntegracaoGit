@@ -410,8 +410,8 @@ public class NovoTV extends AppCompatActivity {
     }
 
     public void confirmar(View v){
-        //Salvar no banco os codigos
-
+        BD db = new BD(this);
+        db.inserir(c);
         finish();
     }
 }

@@ -21,7 +21,9 @@
         <activity android:name=".Main2Activity" />
         <activity android:name=".NovoControle" />
         <activity android:name=".NovoProjetor" />
-        <activity android:name=".NovoTV"></activity>
+        <activity android:name=".NovoTV" />
+        <activity android:name=".ProjetorActivity" />
+        <activity android:name=".TVActivity"></activity>
     </application>
 
 </manifest>
